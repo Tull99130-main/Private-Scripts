@@ -81,5 +81,3 @@ Tab:AddButton({
         end
     end
 })
-
---[DO DISCORD TOMORROW ]
