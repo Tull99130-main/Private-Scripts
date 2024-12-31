@@ -9,12 +9,16 @@ OrionLib:MakeNotification({
     Time = 5
 })
 
--- Table to store multiple valid keys
 local validKeys = {
     "MxknTcBgdyXLBJJdOwnVlgOaSAtsiLNM",
+    "ADMINKEYTULL",
+    "AdminKeyTull",
+    "adminkeytull",
     "ADMINKEYKENTUCKY",
-    "ADMINKEYTULL"
+    "AdminKeyKentucky",
+    "adminkeykentucky"
 }
+
 
 function MakeScriptHub()
     OrionLib:Destroy()
