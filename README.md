@@ -1,1 +1,1 @@
-#[Obfuscate Code](https://lua-obfuscator.netlify.app/)
+# [Obfuscate Code](https://lua-obfuscator.netlify.app/)
