@@ -11,9 +11,9 @@ OrionLib:MakeNotification({
 
 -- Table to store multiple valid keys
 local validKeys = {
-    "Kentucky",
-    "World",
-    "TestKey"
+    "MxknTcBgdyXLBJJdOwnVlgOaSAtsiLNM",
+    "ADMINKEYKENTUCKY",
+    "ADMINKEYTULL"
 }
 
 function MakeScriptHub()
