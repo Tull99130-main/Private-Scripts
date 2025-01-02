@@ -10,18 +10,20 @@ OrionLib:MakeNotification({
     Time = 5
 })
 
-validKeys = {{
+-- Corrected keys list
+local validKeys = {
     "Kentuckyispro",
     "Wp0yMJrAmt5YnFa1TbpqP4xAWJX9FsWm"
-}}
-function MakeScriptHub()
+}
+
+local function MakeScriptHub()
     OrionLib:Destroy()
     print("Starting Phantom Hub V1")
     task.wait(1)
     loadstring(game:HttpGet("https://raw.githubusercontent.com/Tull99130-main/RobloxScripts/refs/heads/main/Scripts/Arsenal2.lua", true))()
 end
 
-function CorrectKeyNotification()
+local function CorrectKeyNotification()
     OrionLib:MakeNotification({
         Name = "Correct Key!",
         Content = "You have entered a valid key.",
@@ -30,7 +32,7 @@ function CorrectKeyNotification()
     })
 end
 
-function IncorrectKeyNotification()
+local function IncorrectKeyNotification()
     OrionLib:MakeNotification({
         Name = "Incorrect Key!",
         Content = "You have entered an invalid key.",
@@ -45,59 +47,23 @@ local Tab = Window:MakeTab({
     PremiumOnly = false
 })
 
-local KeyInput = "" -- Declare KeyInput variable
+local KeyInput = ""
 
 Tab:AddButton({
     Name = "Get Key",
     Callback = function()
-        local success = false
-    
-        -- Attempt to open the Discord link
-        if syn and syn.request then
-            success = pcall(function()
-                syn.request({
-                    Url = "https://discord.gg/xunrunR4jN",
-                    Method = "GET"
-                })
-            end)
-        elseif request then
-            success = pcall(function()
-                request({
-                    Url = "https://discord.gg/xunrunR4jN",
-                    Method = "GET"
-                })
-            end)
-        elseif http and http.request then
-            success = pcall(function()
-                http.request({
-                    Url = "https://discord.gg/xunrunR4jN",
-                    Method = "GET"
-                })
-            end)
-        end
-    
-        -- If URL opening fails, copy the invite link to the clipboard
-        if not success then
-            if setclipboard then
-                setclipboard("https://discord.gg/xunrunR4jN")
-                OrionLib:MakeNotification({
-                    Name = "Invite Link Copied",
-                    Content = "The Discord invite link has been copied to your clipboard!",
-                    Image = "rbxassetid://4483345998",
-                    Time = 5
-                })
-            else
-                OrionLib:MakeNotification({
-                    Name = "Action Failed",
-                    Content = "Unable to open the link or copy it to clipboard.",
-                    Image = "rbxassetid://4483345998",
-                    Time = 5
-                })
-            end
+        if setclipboard then
+            setclipboard("https://discord.gg/xunrunR4jN")
+            OrionLib:MakeNotification({
+                Name = "Invite Link Copied",
+                Content = "The Discord invite link has been copied to your clipboard!",
+                Image = "rbxassetid://4483345998",
+                Time = 5
+            })
         else
             OrionLib:MakeNotification({
-                Name = "Discord Opened",
-                Content = "Join the server for the key!",
+                Name = "Action Failed",
+                Content = "Unable to copy the invite link to clipboard.",
                 Image = "rbxassetid://4483345998",
                 Time = 5
             })
@@ -114,7 +80,7 @@ Tab:AddTextbox({
     Default = "",
     TextDisappear = true,
     Callback = function(Value)
-        KeyInput = Value -- Assign Value to KeyInput
+        KeyInput = Value
     end
 })
 
@@ -130,11 +96,13 @@ Tab:AddButton({
         end
 
         if isValidKey then
-            MakeScriptHub()
             CorrectKeyNotification()
+            MakeScriptHub()
         else
             IncorrectKeyNotification()
         end
     end
 })
+
 OrionLib:Init()
+
