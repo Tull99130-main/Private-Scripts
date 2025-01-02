@@ -398,19 +398,6 @@ MiscTab:AddSection({
     Name = "Player"
 })
 
-MiscTab:AddSlider({
-    Name = "Slider",
-    Min = 0, --  this is the minmum
-    Max = 100, -- this is the max speed they can go
-    Default = 5, -- this is what it is when you first execute the script
-    Color = Color3.fromRGB(255,255,255),
-    Increment = 1,
-    ValueName = "speed",
-    Callback = function(Value)
-        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = Value -- value means the slider
-    end    
-})
-
 MiscTab:AddSection({
     Name = "Miscellaneous"
 })
