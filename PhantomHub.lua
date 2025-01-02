@@ -19,13 +19,7 @@ local validKeys = {
 local function MakeScriptHub()
     OrionLib:Destroy()
     wait(0.1)
-    local phantomHub "https://raw.githubusercontent.com/Tull99130-main/Private-Scripts/refs/heads/main/Phantom%20Hub.lua"
-    if phantomHub then
-     loadstring(game:HttpGet(phantomHub,true))()
-    else
-     print(PhantomHubNotFound)
-    end
-
+     loadstring(game:HttpGet("https://raw.githubusercontent.com/Tull99130-main/Private-Scripts/refs/heads/main/KeySystem.lua",true))()
 end
 
 local function CorrectKeyNotification()
