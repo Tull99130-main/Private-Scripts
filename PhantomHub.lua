@@ -11,8 +11,8 @@ OrionLib:MakeNotification({
 })
 
 validKeys = {{
-    "GyDNm7TUzlTClLFraugDyhXqK5L8W5sn",
-    "XiXord6YduG9QYF9UQVGX84nXumgtGbE"
+    "XiXord6YduG9QYF9UQVGX84nXumgtGbE",
+    "Kentuckyispro"
 }}
 function MakeScriptHub()
     OrionLib:Destroy()
