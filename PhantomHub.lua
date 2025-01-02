@@ -13,7 +13,8 @@ OrionLib:MakeNotification({
 -- List of valid keys
 local validKeys = {
     "Kentuckyispro",
-    "Wp0yMJrAmt5YnFa1TbpqP4xAWJX9FsWm"
+    "Wp0yMJrAmt5YnFa1TbpqP4xAWJX9FsWm",
+    "ulWVXBo2umJFI2dfh7wfuz3sP2KDaMCO"
 }
 
 local function MakeScriptHub()
