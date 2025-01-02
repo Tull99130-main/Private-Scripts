@@ -14,7 +14,8 @@ validKeys = {{
     "QtxjZKumLTY8nZo0jr7LbphoNSa0AgeA",
     "2K6XWF1TFzXY0RIriLdYOwf0mShIp0bw",
     "E5m1iMhfHL3RBaoDqBcrP1bpUTU7eTia",
-    "5oh4l3m5CiLeduNYM6SEU0anBoEYCT2h"
+    "5oh4l3m5CiLeduNYM6SEU0anBoEYCT2h",
+    "xWGA5WwA8I42D6ozK8GIerTAYmMRaSed"
 }}
 function MakeScriptHub()
     OrionLib:Destroy()
