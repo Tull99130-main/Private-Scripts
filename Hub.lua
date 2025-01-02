@@ -19,7 +19,7 @@ local validKeys = {
 local function MakeScriptHub()
     OrionLib:Destroy()
     wait(0.1)
-     loadstring(game:HttpGet("https://raw.githubusercontent.com/Tull99130-main/Private-Scripts/refs/heads/main/Hub.lua",true))()
+     loadstring(game:HttpGet("https://raw.githubusercontent.com/Tull99130-main/Private-Scripts/refs/heads/main/PhantomHub.lua",true))()
 end
 
 local function CorrectKeyNotification()
