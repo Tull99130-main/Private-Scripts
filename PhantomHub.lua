@@ -10,7 +10,7 @@ OrionLib:MakeNotification({
     Time = 5
 })
 
--- Corrected keys list
+-- List of valid keys
 local validKeys = {
     "Kentuckyispro",
     "Wp0yMJrAmt5YnFa1TbpqP4xAWJX9FsWm"
@@ -62,13 +62,13 @@ Tab:AddButton({
             })
         else
             OrionLib:MakeNotification({
-                Name = "Action Failed",
+                Name = "Clipboard Error",
                 Content = "Unable to copy the invite link to clipboard.",
                 Image = "rbxassetid://4483345998",
                 Time = 5
             })
         end
-    end    
+    end
 })
 
 Tab:AddSection({
@@ -87,13 +87,7 @@ Tab:AddTextbox({
 Tab:AddButton({
     Name = "Check Key",
     Callback = function()
-        local isValidKey = false
-        for _, key in ipairs(validKeys) do
-            if KeyInput == key then
-                isValidKey = true
-                break
-            end
-        end
+        local isValidKey = table.find(validKeys, KeyInput) ~= nil
 
         if isValidKey then
             CorrectKeyNotification()
@@ -105,4 +99,5 @@ Tab:AddButton({
 })
 
 OrionLib:Init()
+
 
