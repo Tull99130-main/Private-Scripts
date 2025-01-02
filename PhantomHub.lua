@@ -20,7 +20,7 @@ local function MakeScriptHub()
     OrionLib:Destroy()
     print("Starting Phantom Hub V1")
     task.wait(1)
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/Tull99130-main/RobloxScripts/refs/heads/main/Scripts/Arsenal2.lua", true))()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Tull99130-main/Private-Scripts/refs/heads/main/Phantom%20Hub.lua", true))()
 end
 
 local function CorrectKeyNotification()
